@@ -1,0 +1,33 @@
+{
+  "name": "doi-proxy",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ts-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volatile-static/doi-proxy.git"
+  },
+  "keywords": [
+    "doi"
+  ],
+  "author": "vs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volatile-static/doi-proxy/issues"
+  },
+  "homepage": "https://github.com/volatile-static/doi-proxy#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "got": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/got": "^9.6.12",
+    "ts-node": "^10.9.2"
+  }
+}

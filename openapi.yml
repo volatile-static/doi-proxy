@@ -1,0 +1,138 @@
+openapi: 3.1.0
+info:
+  title: Get article metadata use DOI.
+  version: 1.0.0
+  description: Get article metadata use DOI.
+servers:
+  - url: 'https://doi.org'
+    description: doi.org
+paths:
+  /{doi}:
+    get:
+      summary: Get article metadata use DOI.
+      description: Get article metadata use DOI.
+      operationId: getArticleMetadata
+      parameters:
+        - name: doi
+          in: path
+          description: doi
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  publisher:
+                    type: string
+                    description: publisher
+                  type:
+                    type: string
+                    description: journal article
+                  DOI:
+                    type: string
+                    description: doi
+                  title:
+                    type: string
+                    description: title
+                  author:
+                    type: array
+                    description: authors
+                    items:
+                      type: object
+                      properties:
+                        given:
+                          type: string
+                          description: given name
+                        family:
+                          type: string
+                          description: family name
+                        sequence:
+                          type: string
+                          description: sequence
+                        affiliation:
+                          type: array
+                          description: affiliation
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                                description: name
+                  journal:
+                    type: string
+                    description: journal
+                  year:
+                    type: string
+                    description: year
+                  volume:
+                    type: string
+                    description: volume
+                  issue:
+                    type: string
+                    description: issue
+                  pages:
+                    type: string
+                    description: pages
+                  url:
+                    type: string
+                    description: url
+                  is-referenced-by-count:
+                    type: integer
+                    description: citation count
+                  score:
+                    type: integer
+                  subject:
+                    type: array
+                    description: subject
+                    items:
+                      type: string
+                  language:
+                    type: string
+                    description: language
+                  link:
+                    type: array
+                    description: links
+                    items:
+                      type: object
+                      properties:
+                        URL:
+                          type: string
+                          description: url
+                        content-type:
+                          type: string
+                          description: content-type
+                        content-version:
+                          type: string
+                          description: content-version
+                  references-count:
+                    type: integer
+                    description: references-count
+                  references:
+                    type: array
+                    description: references
+                    items:
+                      type: object
+                      properties:
+                        DOI:
+                          type: string
+                          description: doi
+                        article-title:
+                          type: string
+                          description: title
+                        journal-title:
+                          type: string
+                          description: journal
+                        year:
+                          type: string
+                          description: year
+                        volume:
+                          type: string
+                          description: volume
+                        issue:
+                          type: string
+                          description: issue
