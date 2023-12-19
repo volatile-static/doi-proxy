@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: Get article metadata use DOI.
 servers:
-  - url: 'https://doi.org'
+  - url: 'https://doi-proxy.onrender.com'
     description: doi.org
 paths:
   /{doi}:
